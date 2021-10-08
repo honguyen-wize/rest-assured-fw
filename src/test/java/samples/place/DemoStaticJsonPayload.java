@@ -1,23 +1,23 @@
 package samples.place;
 
 import io.restassured.RestAssured;
-import samples.payload.Payload;
+import samples.common.Utils;
 
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+import java.io.IOException;
 
-public class Demo {
-    public static void main(String[] args){
-        // Validate if Add Place API works
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
-        // given: all input details
-        // when: submit api - resource, http method
-        // then: validate response
+public class DemoStaticJsonPayload {
+    public static void main(String[] args) throws IOException {
+        // Add Place API works
+
+        String jsonFilePath = "src/test/java/samples/payload/staticPlacePayload.json";
 
         RestAssured.baseURI = "https://rahulshettyacademy.com";
         given().log().all().queryParam("key","qaclick123")
                 .header("Content-Type","application/json")
-                .body(Payload.getPlacePayload())
+                .body(Utils.generateStringFromJsonFile(jsonFilePath))
         .when().post("maps/api/place/add/json")
         .then().log().all()
                 .assertThat().statusCode(200)

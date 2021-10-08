@@ -1,0 +1,138 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10005",
+  "self": "http://192.168.1.99:8080/rest/api/2/issue/10005",
+  "key": "RSA-6",
+  "fields": {
+    "comment": {
+      "comments": [
+        {
+          "self": "http://192.168.1.99:8080/rest/api/2/issue/10005/comment/10003",
+          "id": "10003",
+          "author": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "body": "This is my comment from Rest API - Ho Nguyen",
+          "updateAuthor": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "created": "2021-10-07T19:23:32.191+0700",
+          "updated": "2021-10-07T19:23:32.191+0700",
+          "visibility": {
+            "type": "role",
+            "value": "Administrators"
+          }
+        },
+        {
+          "self": "http://192.168.1.99:8080/rest/api/2/issue/10005/comment/10004",
+          "id": "10004",
+          "author": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "body": "This is my second comment from Rest API - Ho Nguyen",
+          "updateAuthor": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "created": "2021-10-07T19:24:33.790+0700",
+          "updated": "2021-10-07T19:24:33.790+0700",
+          "visibility": {
+            "type": "role",
+            "value": "Administrators"
+          }
+        },
+        {
+          "self": "http://192.168.1.99:8080/rest/api/2/issue/10005/comment/10218",
+          "id": "10218",
+          "author": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "body": "This is to test new comment 2",
+          "updateAuthor": {
+            "self": "http://192.168.1.99:8080/rest/api/2/user?username=honguyen1988",
+            "name": "honguyen1988",
+            "key": "JIRAUSER10000",
+            "emailAddress": "honguyen1988@gmail.com",
+            "avatarUrls": {
+              "48x48": "http://192.168.1.99:8080/secure/useravatar?avatarId=10341",
+              "24x24": "http://192.168.1.99:8080/secure/useravatar?size=small&avatarId=10341",
+              "16x16": "http://192.168.1.99:8080/secure/useravatar?size=xsmall&avatarId=10341",
+              "32x32": "http://192.168.1.99:8080/secure/useravatar?size=medium&avatarId=10341"
+            },
+            "displayName": "honguyen1988@gmail.com",
+            "active": true,
+            "timeZone": "Asia/Bangkok"
+          },
+          "created": "2021-10-08T19:54:00.142+0700",
+          "updated": "2021-10-08T19:54:00.142+0700",
+          "visibility": {
+            "type": "role",
+            "value": "Administrators"
+          }
+        }
+      ],
+      "maxResults": 3,
+      "total": 3,
+      "startAt": 0
+    }
+  }
+}

@@ -3,13 +3,16 @@ package samples.place;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import samples.payload.PlacePayload;
+import samples.payload.Payload;
+
+import java.io.IOException;
+import java.util.List;
 
 public class JsonPathTest {
 
-    @Test
+    @Test (enabled = false)
     public void jsonPathTest() {
-        JsonPath coursesJP = new JsonPath(PlacePayload.mockPayload());
+        JsonPath coursesJP = new JsonPath(Payload.mockPayload());
 
         // Print total courses
         int totalCourses = coursesJP.getInt("courses.size()");
@@ -47,9 +50,9 @@ public class JsonPathTest {
         }
     }
 
-    @Test
+    @Test (enabled = false)
     public void sumOfCoursesTest(){
-        JsonPath coursesJP = new JsonPath(PlacePayload.mockPayload());
+        JsonPath coursesJP = new JsonPath(Payload.mockPayload());
 
         int actualSum = 0;
         int totalCourses = coursesJP.getInt("courses.size()");
@@ -63,5 +66,19 @@ public class JsonPathTest {
 
         int purchaseAmount = coursesJP.getInt("dashboard.purchaseAmount");
         Assert.assertEquals(actualSum, purchaseAmount);
+    }
+
+    @Test(enabled = true)
+    public void complexJsonPathTest() throws IOException {
+        JsonPath complexPayload = new JsonPath(Payload.getComplexPayload());
+        List<String> allTitle =  complexPayload.getList("findAll { it.publisher == \"O'Reilly Media\"}.title");
+
+        System.out.println(allTitle);
+
+        System.out.println("=========");
+        String bookTitle = complexPayload.getString("findAll { it.isbn == '9781449331818'}.title");
+        System.out.println(bookTitle);
+
+
     }
 }
