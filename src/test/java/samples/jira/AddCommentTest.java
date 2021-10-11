@@ -81,7 +81,6 @@ public class AddCommentTest {
         // Way 2: Check the added comment with Hashmap
         ArrayList <HashMap> commentsJsonMap = jpIssueDetailsResponse.getJsonObject("fields.comment.comments");
 
-        System.out.println("======PRINT:");
         for (HashMap comment: commentsJsonMap){
 //            HashMap author = (HashMap) comment.get("author");
 //            System.out.println(author.get("emailAddress"));
