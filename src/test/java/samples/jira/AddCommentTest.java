@@ -5,7 +5,7 @@ import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.testng.Assert;
+import org.junit.Assert;
 import org.testng.annotations.Test;
 import samples.common.Utils;
 

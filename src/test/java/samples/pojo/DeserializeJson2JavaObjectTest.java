@@ -1,7 +1,8 @@
 package samples.pojo;
 
 import io.restassured.parsing.Parser;
-import org.testng.Assert;
+import static org.junit.Assert.*;
+
 import org.testng.annotations.Test;
 import samples.pojo.entities.EntityAcademy;
 import samples.pojo.entities.EntityWebAutomation;
@@ -35,6 +36,6 @@ public class DeserializeJson2JavaObjectTest {
             System.out.println(webAutomationEntity.getCourseTitle());
         }
 
-        Assert.assertTrue(expectedCourses.equals(actualAutoCourses));
+        assertTrue(expectedCourses.equals(actualAutoCourses));
     }
 }

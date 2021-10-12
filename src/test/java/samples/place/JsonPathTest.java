@@ -1,7 +1,7 @@
 package samples.place;
 
 import io.restassured.path.json.JsonPath;
-import org.testng.Assert;
+import org.junit.Assert;
 import org.testng.annotations.Test;
 import samples.payload.Payload;
 
