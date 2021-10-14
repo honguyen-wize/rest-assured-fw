@@ -11,17 +11,18 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 public class BaseRequest {
-    RequestSpecification requestSpec;
+    private static RequestSpecification requestSpec;
 
     public RequestSpecification getDefaultRequestSpecification() throws FileNotFoundException {
-        PrintStream logStream = new PrintStream(new FileOutputStream("logging.txt"));
-
-        requestSpec = new RequestSpecBuilder().setBaseUri(Utils.getGlobalVariable("base.url"))
-                .addQueryParam("key", "qaclick123")
-                .setContentType(ContentType.JSON)
-                .addFilter(RequestLoggingFilter.logRequestTo(logStream)) // log request to file
-                .addFilter(ResponseLoggingFilter.logResponseTo(logStream)) // log response to file
-                .build();
+        if(requestSpec == null) { // to avoid re-creating logging.txt
+            PrintStream logStream = new PrintStream(new FileOutputStream("logging.txt"));
+            requestSpec = new RequestSpecBuilder().setBaseUri(Utils.getGlobalVariable("base.url"))
+                    .addQueryParam("key", "qaclick123")
+                    .setContentType(ContentType.JSON)
+                    .addFilter(RequestLoggingFilter.logRequestTo(logStream)) // log request to file
+                    .addFilter(ResponseLoggingFilter.logResponseTo(logStream)) // log response to file
+                    .build();
+        }
 
         return requestSpec;
 

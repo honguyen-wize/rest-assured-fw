@@ -8,12 +8,12 @@ import java.util.List;
 
 public class PayloadBuild {
 
-    public EntityPlace getAddPlacePayload(){
+    public EntityPlace getAddPlacePayload(String name, String language, String address){
         EntityPlace payloadPlace = new EntityPlace();
-        payloadPlace.setName("Ho Payload");
+        payloadPlace.setName(name);
         payloadPlace.setAccuracy(33);
-        payloadPlace.setAddress("Moonlight Park View, KP5");
-        payloadPlace.setLanguage("Vietnam - VN");
+        payloadPlace.setAddress(address);
+        payloadPlace.setLanguage(language);
         payloadPlace.setPhone_number("(+64) 983 893 3937");
         payloadPlace.setWebsite("http://google.com");
 
@@ -28,5 +28,9 @@ public class PayloadBuild {
         payloadPlace.setLocation(location);
 
         return payloadPlace;
+    }
+
+    public String deletePlacePayload(String placeId){
+        return "{\r\n    \"place_id\":\"" + placeId + "\"\r\n}\r\n";
     }
 }
