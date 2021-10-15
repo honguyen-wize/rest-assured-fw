@@ -1,7 +1,7 @@
 package samples.pojo;
 
 import io.restassured.RestAssured;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import samples.pojo.entities.PayloadPlace;
 import samples.pojo.entities.PayloadLocation;
 
@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class SerializeJavaObject2JsonPayloadTest {
 
-    @Test
+//    @Test
     public void payloadBuilderTest(){
         RestAssured.baseURI = "https://rahulshettyacademy.com";
         // Build the following json structure

@@ -21,7 +21,7 @@ public class StepDefPlace extends BaseRequest {
     RequestSpecification resSpec;
     Response response;
     PayloadBuild payloadBuild = new PayloadBuild();
-    static String placeIdFromAddPlaceResponse;
+    protected static String placeIdFromAddPlaceResponse; // "static" to share place id among test cases
 
     @Given("Add place Payload with {string} {string} {string}")
     public void add_place_payload_is_created(String name, String language, String address) throws FileNotFoundException {

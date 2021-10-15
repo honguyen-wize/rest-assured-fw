@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import samples.common.Utils;
 import samples.pojo.entities.PayloadLocation;
 import samples.pojo.entities.PayloadPlace;
@@ -17,7 +17,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class SpecBuilderTest {
-    @Test
+//    @Test
     public void payloadBuilderTest(){
         PayloadPlace payloadPlace = this.getPayloadPlace();
         RequestSpecification defaultRequestSpec= new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")

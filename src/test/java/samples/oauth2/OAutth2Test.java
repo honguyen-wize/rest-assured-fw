@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.*;
 
 public class OAutth2Test {
 
-    @Test
+//    @Test
     public void oAuth2Test(){
         String code = "4%2F0AX4XfWhA9qf4cYJCO49309tiGPFrBZnEC0um-sQDYoRftPGiavPmRkMtKbyS7--DFpVCaQ";
         String accessToken = "";

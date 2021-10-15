@@ -2,14 +2,14 @@ package samples.jira;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.io.File;
 
 import static io.restassured.RestAssured.given;
 
 public class AddAttachmentTest {
-    @Test
+//    @Test
     public void addAttachmentJiraTest(){
         String jiraId = "RSA-6";
         RestAssured.baseURI = "http://192.168.1.99:8080";

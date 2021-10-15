@@ -1,7 +1,5 @@
 package cucumber.options;
 
-//import cucumber.api.CucumberOptions;
-//import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
@@ -11,9 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "stepDefinitions",
-//        format = {"pretty", "html:target/cucumber", "json:target/cucumber.json"}
-        plugin = { "pretty", "html:target/cucumber.html" },
-        monochrome = true
+        plugin = { "pretty", "html:target/cucumber.html", "json:target/jsonReports/cucumber-report.json" },
+        tags = "@AddPlace or @DeletePlace"
 )
 
 public class TestRunner {

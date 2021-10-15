@@ -6,7 +6,7 @@ import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import samples.common.Utils;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import org.json.simple.parser.*;
 
 public class AddCommentTest {
-    @Test
+//    @Test
     public void addCommentTest() throws ParseException {
         String jiraId = "RSA-6";
         String myComment = "This is to test new comment 2345";

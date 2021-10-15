@@ -5,14 +5,14 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 import io.restassured.path.json.JsonPath;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+//import org.testng.annotations.DataProvider;
+//import org.testng.annotations.Test;
 import samples.common.Utils;
 import samples.payload.Payload;
 
 public class DynamicPayloadTest {
 
-    @Test (dataProvider = "BooksData")
+//    @Test(dataProvider = "BooksData")
     public void addBookTest(String isbnProvider, String aisleProvider){
         RestAssured.baseURI = "http://216.10.245.166";
 
@@ -37,7 +37,7 @@ public class DynamicPayloadTest {
 
     }
 
-    @DataProvider (name = "BooksData")
+//    @DataProvider (name = "BooksData")
     public Object[][] getBookData(){
         return new Object[][]
                 {

@@ -3,7 +3,7 @@ package samples.pojo;
 import io.restassured.parsing.Parser;
 import static org.junit.Assert.*;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 import samples.pojo.entities.EntityAcademy;
 import samples.pojo.entities.EntityWebAutomation;
 
@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class DeserializeJson2JavaObjectTest {
 
-    @Test
+//    @Test
     public void pojoTest(){
         String [] expectedAutoCoursesArray = {"Selenium Webdriver Java", "Cypress", "Protractor"};
         List<String> expectedCourses =  Arrays.asList(expectedAutoCoursesArray);

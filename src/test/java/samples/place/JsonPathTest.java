@@ -2,7 +2,7 @@ package samples.place;
 
 import io.restassured.path.json.JsonPath;
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import samples.payload.Payload;
 
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class JsonPathTest {
 
-    @Test (enabled = false)
+//    @Test
     public void jsonPathTest() {
         JsonPath coursesJP = new JsonPath(Payload.mockPayload());
 
@@ -50,7 +50,7 @@ public class JsonPathTest {
         }
     }
 
-    @Test (enabled = false)
+    @Test
     public void sumOfCoursesTest(){
         JsonPath coursesJP = new JsonPath(Payload.mockPayload());
 
@@ -68,7 +68,7 @@ public class JsonPathTest {
         Assert.assertEquals(actualSum, purchaseAmount);
     }
 
-    @Test(enabled = true)
+    @Test
     public void complexJsonPathTest() throws IOException {
         JsonPath complexPayload = new JsonPath(Payload.getComplexPayload());
         List<String> allTitle =  complexPayload.getList("findAll { it.publisher == \"O'Reilly Media\"}.title");
