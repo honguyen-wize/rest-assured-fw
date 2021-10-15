@@ -1,5 +1,6 @@
 Feature: Add Place Validations
 
+  @Regression
   @AddPlace
   Scenario Outline: Verify if a place is able to add
     Given Add place Payload with "<name>" "<language>" "<address>"
@@ -14,6 +15,7 @@ Feature: Add Place Validations
     |Ho Nguyen    |Vietnamese   |MoonLight Park View  |
 #    |Mr Bean      |Chinese      |Viettel Building     |
 
+  @Regression
   @DeletePlace
   Scenario: Verify delete a place
     Given Delete place Payload
