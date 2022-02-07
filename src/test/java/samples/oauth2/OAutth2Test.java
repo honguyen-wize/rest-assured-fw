@@ -17,7 +17,7 @@ public class OAutth2Test {
 //                    .queryParam("code", code)
 //                    .queryParam("client_id", "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com")
 //                    .queryParam("client_secret", "erZOWM9g3UtwNRj340YYaK_W")
-//                    .queryParam("redirect_uri", "https://rahulshettyacademy.com/getCourse.php")
+//                    .queryParam("redirect_uri", "http://3.6.24.244/getCourse.php")
 //                    .queryParam("grant_type", "authorization_code")
 //                .when().post("https://www.googleapis.com/oauth2/v4/token")
 //                .then().log().all().assertThat().statusCode(200)
@@ -27,7 +27,7 @@ public class OAutth2Test {
 //        accessToken = jpCodeResponse.getString("access_token");
 
         String getCourseResponse = given().param("access_token", accessToken)
-                .when().get("https://rahulshettyacademy.com/getCourse.php")
+                .when().get("http://3.6.24.244/getCourse.php")
                 .then().log().all().assertThat().statusCode(200)
                 .extract().response().asString();
     }

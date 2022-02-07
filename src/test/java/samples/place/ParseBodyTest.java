@@ -19,7 +19,7 @@ public class ParseBodyTest {
         // when: submit api - resource, http method
         // then: validate response
 
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
+        RestAssured.baseURI = "http://3.6.24.244";
 
         // Add Place
         String response = given().log().all().queryParam("key","qaclick123")

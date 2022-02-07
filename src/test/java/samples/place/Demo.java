@@ -14,7 +14,7 @@ public class Demo {
         // when: submit api - resource, http method
         // then: validate response
 
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
+        RestAssured.baseURI = "http://3.6.24.244";
         given().log().all().queryParam("key","qaclick123")
                     .header("Content-Type","application/json")
                     .body(Payload.getPlacePayload())

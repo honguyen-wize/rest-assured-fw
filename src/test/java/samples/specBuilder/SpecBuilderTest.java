@@ -17,10 +17,10 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class SpecBuilderTest {
-//    @Test
+    @Test
     public void payloadBuilderTest(){
         PayloadPlace payloadPlace = this.getPayloadPlace();
-        RequestSpecification defaultRequestSpec= new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
+        RequestSpecification defaultRequestSpec= new RequestSpecBuilder().setBaseUri("http://3.6.24.244")
                 .addQueryParam("key", "qaclick123")
                 .setContentType(ContentType.JSON)
                 .build();

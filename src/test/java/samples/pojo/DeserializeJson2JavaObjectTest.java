@@ -25,7 +25,7 @@ public class DeserializeJson2JavaObjectTest {
         EntityAcademy academy = given().param("access_token", accessToken)
                     .expect().defaultParser(Parser.JSON) // to make sure to parse response to Json instead of the default text/html
                 .when()
-                    .get("https://rahulshettyacademy.com/getCourse.php")
+                    .get("http://3.6.24.244/getCourse.php")
                     .as(EntityAcademy.class); // convert json response to pojo Java class => SERIALIZATION
 
         System.out.println(academy.getInstructor());

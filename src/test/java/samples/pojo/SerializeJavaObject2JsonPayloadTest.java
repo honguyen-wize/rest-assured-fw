@@ -14,7 +14,7 @@ public class SerializeJavaObject2JsonPayloadTest {
 
 //    @Test
     public void payloadBuilderTest(){
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
+        RestAssured.baseURI = "http://3.6.24.244";
         // Build the following json structure
             //        {
             //            "location": {

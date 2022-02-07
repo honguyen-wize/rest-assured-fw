@@ -14,7 +14,7 @@ public class DemoStaticJsonPayload {
 
         String jsonFilePath = "src/test/java/samples/payload/staticPlacePayload.json";
 
-        RestAssured.baseURI = "https://rahulshettyacademy.com";
+        RestAssured.baseURI = "http://3.6.24.244";
         given().log().all().queryParam("key","qaclick123")
                 .header("Content-Type","application/json")
                 .body(Utils.generateStringFromJsonFile(jsonFilePath))
