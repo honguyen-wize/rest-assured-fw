@@ -1,7 +1,7 @@
 package common;
 
-import pojo.EntityLocation;
-import pojo.EntityPlace;
+import entities.EntityLocation;
+import entities.EntityPlace;
 
 import java.util.ArrayList;
 import java.util.List;

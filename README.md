@@ -1,6 +1,6 @@
 # rest-assured-fw
 # Command to run the test
-$ mvn test -Dcucumber.filter.tags="@DeletePlace"
+$ mvn test -Dcucumber.filter.tags="@AddPlace or @DeletePlace" -Denv="staging"
 
-# Command to run the test with cucumber report html
-$ mvn test verify -Dcucumber.filter.tags="@AddPlace or @DeletePlace"
+# Command to run the test with cucumber report html locally (target/cucumber-html-reports)
+$ mvn verify -Dcucumber.filter.tags="@AddPlace or @DeletePlace" -Denv="staging"

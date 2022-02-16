@@ -1,4 +1,4 @@
-Feature: Add Place Validations
+Feature: Place API Validations
 
   @Regression
   @AddPlace

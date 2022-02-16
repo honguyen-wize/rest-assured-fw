@@ -1,4 +1,4 @@
-package pojo;
+package entities;
 
 import lombok.Getter;
 import lombok.Setter;
