@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import api.configuration.APIResources;
 import common.Utils;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,6 +13,7 @@ import io.restassured.specification.RequestSpecification;
 import common.BaseRequest;
 import common.PayloadBuild;
 import org.junit.Assert;
+import io.restassured.module.jsv.JsonSchemaValidator;
 
 import java.io.FileNotFoundException;
 import static io.restassured.RestAssured.given;
@@ -55,6 +57,7 @@ public class StepDefPlace extends BaseRequest {
     public void verify_created_maps_to_using(String expectedName, String resourceName) throws FileNotFoundException {
         // get place id from the ADD api call
         placeIdFromAddPlaceResponse = Utils.getValueFromKeyInResponse(response, "place_id");
+        System.out.println("Added Place ID: " + placeIdFromAddPlaceResponse);
 
         // prepare the requestSpec with query para place_id
         resSpec = given().spec(getDefaultRequestSpecification())
@@ -65,6 +68,12 @@ public class StepDefPlace extends BaseRequest {
 
         String actualNameFromGetPlaceResponse= Utils.getValueFromKeyInResponse(response,"name");
         Assert.assertEquals(actualNameFromGetPlaceResponse, expectedName);
+    }
+
+    @And("the added place has the correct schema")
+    public void verify_added_place_schema(){
+        JsonSchemaValidator validator = JsonSchemaValidator.matchesJsonSchemaInClasspath("schema-place.json");
+        response.then().assertThat().body(validator);
     }
 
     @Given("Delete place Payload")

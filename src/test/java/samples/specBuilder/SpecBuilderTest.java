@@ -20,26 +20,30 @@ public class SpecBuilderTest {
     @Test
     public void payloadBuilderTest(){
         PayloadPlace payloadPlace = this.getPayloadPlace();
-        RequestSpecification defaultRequestSpec= new RequestSpecBuilder().setBaseUri("http://3.6.24.244")
+
+        // Create defaultRequestSpec
+        RequestSpecification defaultRequestSpec = new RequestSpecBuilder().setBaseUri("http://3.6.24.244")
                 .addQueryParam("key", "qaclick123")
                 .setContentType(ContentType.JSON)
                 .build();
 
+        // Make a request specification with the defaultRequestSpec
+        RequestSpecification resSpec = given().spec(defaultRequestSpec).body(payloadPlace);
+
+
+        // Create defaultResponseSpec
         ResponseSpecification defaultResponseSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
                 .expectContentType(ContentType.JSON)
                 .build();
 
-        // Make a general request specification
-        RequestSpecification resSpec = given().spec(defaultRequestSpec).body(payloadPlace);
-
-        // Call Add Place API with the created resSpec
+        // Call Add Place API with the created defaultResponseSpec
         Response responseAddPlace = resSpec.when().post("maps/api/place/add/json")
                 .then().log().all().spec(defaultResponseSpec).extract().response();
 
         String placeId = Utils.stringToJsonPath(responseAddPlace.asString()).getString("place_id");
 
-        // Call Get Place API with the created resSpec
+        // Call Get Place API with the created defaultResponseSpec
         Response responseGetPlace = resSpec.queryParam("place_id", placeId)
                 .when().get("/maps/api/place/get/json")
                 .then().log().all().spec(defaultResponseSpec).extract().response();

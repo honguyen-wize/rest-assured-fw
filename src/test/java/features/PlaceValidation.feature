@@ -9,6 +9,7 @@ Feature: Add Place Validations
     And "status" in response body is "OK"
     And "scope" in response body is "APP"
     And verify created place_id maps to "<name>" using "GET_PLACE_API"
+    And the added place has the correct schema
 
     Examples:
     |name         |language     |address              |

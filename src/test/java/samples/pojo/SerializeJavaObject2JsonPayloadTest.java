@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class SerializeJavaObject2JsonPayloadTest {
 
-//    @Test
+    @Test
     public void payloadBuilderTest(){
         RestAssured.baseURI = "http://3.6.24.244";
         // Build the following json structure

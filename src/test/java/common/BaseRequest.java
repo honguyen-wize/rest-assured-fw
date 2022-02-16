@@ -17,7 +17,7 @@ public class BaseRequest {
         if(requestSpec == null) { // to avoid re-creating logging.txt
             PrintStream logStream = new PrintStream(new FileOutputStream("logging.txt"));
             requestSpec = new RequestSpecBuilder().setBaseUri(Utils.getGlobalVariable("base.url"))
-                    .addQueryParam("key", "qaclick123")
+                    .addQueryParam("key", Utils.getGlobalVariable("api.key"))
                     .setContentType(ContentType.JSON)
                     .addFilter(RequestLoggingFilter.logRequestTo(logStream)) // log request to file
                     .addFilter(ResponseLoggingFilter.logResponseTo(logStream)) // log response to file

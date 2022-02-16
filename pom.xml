@@ -39,7 +39,7 @@
                                 <!-- supports wildcard or name pattern -->
                                 <param>**/*.json</param>
                             </jsonFiles>
-                            <parallelTesting>false</parallelTesting>
+<!--                            <parallelTesting>false</parallelTesting>-->
                             <!-- optional, set true to group features by its Ids -->
                             <mergeFeaturesById>false</mergeFeaturesById>
                             <!-- optional, set true to get a final report with latest results of the same test from different test runs -->
@@ -71,11 +71,11 @@
             <artifactId>rest-assured</artifactId>
             <version>4.4.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--        <groupId>org.testng</groupId>-->
-<!--        <artifactId>testng</artifactId>-->
-<!--        <version>7.4.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>4.5.0</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -103,11 +103,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.9.9</version>
         </dependency>
-<!--        <dependency>&lt;!&ndash; POJO Serialize and deserialize&ndash;&gt;-->
-<!--            <groupId>com.google.code.gson</groupId>-->
-<!--            <artifactId>gson</artifactId>-->
-<!--            <version>2.8.5</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
